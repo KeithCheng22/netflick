@@ -1,8 +1,9 @@
-import React from 'react'
+'use client'
 import Image from 'next/image'
 import Star from '../public/star.svg'
 import MotionDiv from './MotionDiv';
 import { Bebas_Neue } from "next/font/google";
+import { useRouter } from 'next/navigation';
 
 const bebas = Bebas_Neue({ subsets: ["latin"], weight: '400' });
 
@@ -19,15 +20,23 @@ const variants = {
 }
 
 const MovieCard = ({ movieDetails, index }) => {
+
+   const router = useRouter()
+
     const {title, poster_path, vote_average, original_language, release_date} = movieDetails
     const year = release_date.split('-')[0]
 
     const imageUrl = `${baseImageUrl}${posterSize}${poster_path}`;
 
+    const handleClick = () => {
+      return router.push(`/${title}`)
+    }
+
   return (
-    <MotionDiv initial="invisible" variants={variants} animate='visible' transition={{ delay: index * 0.15, ease: "linear", duration: 0.5 }} className='flex flex-col items-center p-3 cursor-pointer hover:scale-105 transition-all duration-500'>
-        <div className='text-white'>
+    <MotionDiv onClick={handleClick} initial="invisible" variants={variants} animate='visible' transition={{ delay: (index % 4) * 0.1, ease: "linear", duration: 0.3 }} className='flex flex-col items-center p-3 cursor-pointer hover:scale-105 transition-all duration-500'>
+        <div className='relative text-white'>
           <Image className='rounded-lg max-sm:w-[250px]' src={imageUrl} width={300} height={200} alt={`${title} poster`}/>
+          {vote_average.toFixed(1) >= 8 && <h1 className='absolute text-red-300 font-semibold top-2 right-2 px-2 bg-white bg-opacity-95 rounded-md'>HOT</h1>}
 
           <div className=''>
             <div className='flex mt-2'>

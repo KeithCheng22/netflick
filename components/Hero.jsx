@@ -14,7 +14,10 @@ const Hero = () => {
             </div>
 
             <div className="absolute inset-0 h-fit my-auto text-white text-center">
-                <h1 className='max-sm:text-lg sm:text-2xl md:text-4xl lg:text-6xl font-semibold'>All the movies you <span className='text-red-300'>love</span> in one place</h1>
+                <h1 className='w-[80%] mx-auto  max-sm:text-lg sm:text-2xl md:text-4xl lg:text-6xl font-semibold'>All the movies you <span className='text-red-300'>love</span> in one place</h1>
+                <form>
+                  <input type='text' name='query' autoFocus className='w-[80%] min-h-10 rounded-xl bg-transparent mt-5 border-2 indent-4 outline-transparent' placeholder='Marvels: Infinity War'></input>
+                </form>
             </div>
         </section>
     </header>

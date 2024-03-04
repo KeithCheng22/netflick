@@ -1,5 +1,4 @@
 'use server'
-import MovieCard from "@/components/MovieCard";
 
 const options = {
   method: 'GET',
@@ -14,6 +13,14 @@ export const fetchMovies = async (page) => {
     const data = await res.json()
     const movieData = data.results
 
-    return movieData.map((movie, index) => <MovieCard index={index} key={movie.id} movieDetails={movie}/>)
-
+    return movieData
 }
+
+export const searchMovie = async (movieName) => {
+  const res = await fetch(`https://api.themoviedb.org/3/search/movie?query=${movieName}`, options)
+  const data = await res.json()
+  const movieData = data.results
+
+  return movieData
+}
+

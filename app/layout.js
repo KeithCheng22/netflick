@@ -14,7 +14,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className} bg-black bg-opacity-90 p-10 max-sm:p-3`}>
         <div className="w-full max-w-[1200px] mx-auto">
-          <Hero />
           {children}
         </div>
       </body>
