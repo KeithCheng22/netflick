@@ -35,7 +35,7 @@ const MovieCard = ({ movieDetails, index }) => {
   return (
     <MotionDiv onClick={handleClick} initial="invisible" variants={variants} animate='visible' transition={{ delay: (index % 4) * 0.1, ease: "linear", duration: 0.3 }} className='flex flex-col items-center p-3 cursor-pointer hover:scale-105 transition-all duration-500'>
         <div className='relative text-white'>
-          <Image className='rounded-lg max-sm:w-[250px]' src={imageUrl} width={300} height={200} alt={`${title} poster`}/>
+          <Image className='rounded-lg max-sm:w-[250px] mx-auto' src={imageUrl} width={300} height={200} alt={`${title} poster`}/>
           {vote_average.toFixed(1) >= 8 && <h1 className='absolute text-red-300 font-semibold top-2 right-2 px-2 bg-white bg-opacity-95 rounded-md'>HOT</h1>}
 
           <div className=''>
