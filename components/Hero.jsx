@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <header id='header'>
         <section className="relative max-h-[70vh] flex">
-            <video className="opacity-35 rounded-xl object-cover" muted autoPlay loop src={require('../public/video.mp4')} />;
+            <video className="opacity-35 rounded-xl object-cover" muted autoPlay loop src={require('../video.mp4')} />;
 
             <div className='absolute flex px-2 py-6 items-center'>
               <Image src={Netflix} width={60}/>
