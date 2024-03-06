@@ -40,13 +40,13 @@ const MovieCard = ({ movieDetails, index }) => {
 
           <div className=''>
             <div className='flex mt-2'>
-              <h2 className={`text-white text-xl tracking-[0.08em] max-sm:text-lg ${bebas.className}`}>{title} ({year})</h2>
+              <h2 className={`text-white text-xl tracking-[0.08em] w-full max-sm:text-center max-sm:text-lg ${bebas.className}`}>{title} ({year})</h2>
               <div className='ml-auto h-fit'>
                 <h3 className={`px-2 bg-white bg-opacity-50 rounded-md max-sm:hidden ${bebas.className}`}>{original_language}</h3>
               </div>
             </div>
 
-            <span className='flex gap-2 items-center font-normal'>
+            <span className='flex gap-2 items-center font-normal max-sm:justify-center'>
               <Image className='inline-block' src={Star} width={15} alt='star rating'/>{vote_average.toFixed(1)}
             </span>
           </div>
