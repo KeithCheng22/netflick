@@ -24,3 +24,4 @@ export const searchMovie = async (movieName) => {
   return movieData
 }
 
+

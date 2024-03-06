@@ -17,7 +17,9 @@
     "node-fetch": "^2.7.0",
     "react": "^18",
     "react-dom": "^18",
-    "react-intersection-observer": "^9.8.1"
+    "react-hot-toast": "^2.4.1",
+    "react-intersection-observer": "^9.8.1",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
